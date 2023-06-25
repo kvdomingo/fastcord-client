@@ -1,9 +1,9 @@
 /**
- * This file will automatically be loaded by webpack and run in the "renderer" context.
+ * This file will automatically be loaded by vite and run in the "renderer" context.
  * To learn more about the differences between the "main" and the "renderer" context in
  * Electron, visit:
  *
- * https://electronjs.org/docs/latest/tutorial/process-model
+ * https://electronjs.org/docs/tutorial/application-architecture#main-and-renderer-processes
  *
  * By default, Node.js integration in this file is disabled. When enabling Node.js integration
  * in a renderer process, please be aware of potential security implications. You can read
@@ -11,7 +11,7 @@
  *
  * https://electronjs.org/docs/tutorial/security
  *
- * To enable Node.js integration in this file, open up `main.js` and enable the `nodeIntegration`
+ * To enable Node.js integration in this file, open up `main.ts` and enable the `nodeIntegration`
  * flag:
  *
  * ```
@@ -27,21 +27,20 @@
  */
 import React from "react";
 import { createRoot } from "react-dom/client";
-import { CssBaseline, ThemeProvider } from "@mui/material";
-import App from "./App";
-import "./index.css";
-import theme from "./themes";
 
-const container = document.getElementById("root");
+import App from "@/App.tsx";
+
+import "./index.css";
+
+const container = document.getElementById("root") as HTMLElement;
 const root = createRoot(container);
 
 root.render(
   <React.StrictMode>
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <App />
-    </ThemeProvider>
+    <App />
   </React.StrictMode>,
 );
 
-console.log('👋 This message is being logged by "renderer.js", included via webpack');
+console.log(
+  '👋 This message is being logged by "renderer.tsx", included via Vite',
+);

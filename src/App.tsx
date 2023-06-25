@@ -1,7 +1,8 @@
-import { Typography } from "@mui/material";
-
-function App() {
-  return <Typography variant="h3">Hello, Electron-Forge!</Typography>;
+export default function App() {
+  return (
+    <main>
+      <h1>💖 Hello World!</h1>
+      <p>Welcome to your Electron application.</p>
+    </main>
+  );
 }
-
-export default App;
