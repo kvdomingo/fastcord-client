@@ -30,7 +30,7 @@
     "@types/react-dom": "^18.2.6",
     "@vitejs/plugin-react": "^4.0.1",
     "autoprefixer": "^10.4.14",
-    "electron": "25.2.0",
+    "electron": "25.7.0",
     "postcss": "^8.4.24",
     "prettier": "^2.8.8",
     "prettier-plugin-tailwindcss": "^0.3.0",
@@ -39,12 +39,18 @@
   },
   "dependencies": {
     "@fontsource/inter": "^5.0.3",
+    "@headlessui/react": "^1.7.17",
+    "@heroicons/react": "^2.0.18",
     "@reduxjs/toolkit": "^1.9.5",
-    "axios": "^1.4.0",
+    "axios": "^1.5.0",
+    "clsx": "^2.0.0",
     "electron-squirrel-startup": "^1.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-redux": "^8.1.1",
-    "swr": "^2.2.0"
+    "react-query": "^3.39.3",
+    "react-redux": "^8.1.2",
+    "react-router-dom": "^6.15.0",
+    "tailwind-merge": "^1.14.0",
+    "tailwindcss-animate": "^1.0.6"
   }
 }

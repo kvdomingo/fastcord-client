@@ -27,6 +27,8 @@
  */
 import React from "react";
 import { createRoot } from "react-dom/client";
+import { QueryClientProvider } from "react-query";
+import { Provider } from "react-redux";
 
 import "@fontsource/inter/300.css";
 import "@fontsource/inter/400.css";
@@ -35,6 +37,8 @@ import "@fontsource/inter/700.css";
 import "@fontsource/inter/900.css";
 
 import App from "@/App.tsx";
+import { queryClient } from "@/api";
+import { store } from "@/store/store.ts";
 
 import "./index.css";
 
@@ -43,7 +47,11 @@ const root = createRoot(container);
 
 root.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <QueryClientProvider client={queryClient}>
+        <App />
+      </QueryClientProvider>
+    </Provider>
   </React.StrictMode>,
 );
 

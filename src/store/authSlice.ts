@@ -1,5 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+import { RootState } from "@/store/store.ts";
+
 interface AuthState {
   isLoggedIn: boolean;
   username: string;
@@ -17,5 +19,7 @@ export const authSlice = createSlice({
   initialState,
   reducers: {},
 });
+
+export const selectAuth = (state: RootState) => state.auth;
 
 export default authSlice.reducer;
